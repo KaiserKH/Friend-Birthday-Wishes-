@@ -1,0 +1,126 @@
+body {
+  font-size: 150px;
+  font-family: serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.text {
+  text-align: center;
+  margin-top: 25vh;
+  position: relative;
+}
+.text h1 {
+  font-size: 150px;
+  color: rgba(255, 255, 255, 0.07);
+  background-image: url('IMG_20250312_070942.jpg');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: textMove 2s linear infinite;
+  position: relative;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 60px rgba(110, 255, 255, 0.2);
+  backdrop-filter: blur(0.1px);
+}
+.text h1::before {
+  content: "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background-image: linear-gradient(90deg, blue, red, yellow, lime);
+  background-size: 500%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: glowingText 10s linear infinite;
+  z-index: -1;
+  filter: blur(0.1px);
+}
+@keyframes textMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+@keyframes glowingText {
+  10% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hello {
+  text-align: center ;
+  margin-top: 15vh;
+  position: relative;
+  font-family: sans-serif;
+border-bottom-right-radius: 40px;
+}
+.hello h2 {
+  font-size: 20px;
+  position: relative;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  padding: 20px 40px auto;
+  margin: 0 auto;
+  display: inline-block;
+  font-family: sans-serif;
+  color: transparent;
+  background-image: linear-gradient(280deg, green, white, red, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: glowingText 16s linear infinite;
+  border: 5px solid transparent;
+  border-radius: 11px;
+  z-index: 1;
+}
+.hello h2::before {
+  content: "K Kh K";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.2),
+    rgba(255, 0, 255, 0.2),
+    rgba(255, 255, 0, 0.2)
+  );
+  z-index: -1;
+  filter: blur(15px);
+  animation: borderGlow 14s ease-in-out infinite alternate;
+  border: 20px;
+}
+@keyframes textMove {
+  10% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+@keyframes glowingText {
+  10% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
